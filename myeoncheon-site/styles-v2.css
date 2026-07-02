@@ -1,5 +1,4 @@
 :root {
-  --spring: #ddebe7;
   --rice: #f4efe3;
   --ink: #1f2522;
   --nuruk: #c8b58a;
@@ -308,10 +307,6 @@ h3 {
   padding: clamp(86px, 12vw, 168px) clamp(22px, 6vw, 96px);
 }
 
-.muted {
-  background: var(--spring);
-}
-
 .ink {
   background: var(--ink);
   color: var(--white);
@@ -372,12 +367,16 @@ h3 {
 }
 
 .intro-copy p,
-.measure p,
 .product-copy p,
-.local-copy p,
 .tasting-copy p,
 .section-head p {
   color: #4c5752;
+  font-size: 18px;
+}
+
+.measure p,
+.local-copy p {
+  color: rgba(255, 255, 255, 0.72);
   font-size: 18px;
 }
 
@@ -408,7 +407,7 @@ h3 {
 }
 
 .label {
-  background: linear-gradient(180deg, var(--spring), #eef4f0);
+  background: var(--rice);
 }
 
 .label-grid {
@@ -562,15 +561,15 @@ h3 {
 .spring-cards article {
   min-height: 240px;
   padding: 30px;
-  border: 1px solid rgba(35, 67, 60, 0.16);
-  background: rgba(255, 250, 240, 0.54);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .spring-cards span,
 .timeline span {
   display: inline-block;
   margin-bottom: 48px;
-  color: var(--green);
+  color: var(--nuruk);
   font-family: var(--serif);
   font-size: 18px;
 }
@@ -589,8 +588,8 @@ h3 {
 .local-photo {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(35, 67, 60, 0.14);
-  background: rgba(255, 250, 240, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .spring-gallery img {
@@ -642,7 +641,7 @@ h3 {
   gap: 34px;
   align-items: end;
   padding: clamp(28px, 5vw, 56px);
-  background: var(--spring);
+  background: var(--rice);
   box-shadow: var(--shadow);
 }
 
@@ -654,7 +653,7 @@ h3 {
   border-radius: 48px 48px 28px 28px;
   background:
     linear-gradient(180deg, transparent 0 26%, rgba(35, 67, 60, 0.08) 26% 55%, transparent 55%),
-    linear-gradient(100deg, #ffffff, #e7eee9 46%, #ffffff);
+    linear-gradient(100deg, #ffffff, #f2ece0 46%, #ffffff);
   box-shadow: 0 24px 48px rgba(31, 37, 34, 0.13);
 }
 
@@ -664,7 +663,7 @@ h3 {
   height: 76px;
   margin: -74px auto 0;
   border-radius: 18px 18px 6px 6px;
-  background: linear-gradient(90deg, #ffffff, #dfe9e5, #ffffff);
+  background: linear-gradient(90deg, #ffffff, #eee2cd, #ffffff);
   content: "";
 }
 
@@ -717,11 +716,6 @@ h3 {
   margin: 0 auto 70px;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-}
-
-.brewery-gallery figure {
-  border-color: rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.05);
 }
 
 .brewery-gallery img {
@@ -810,10 +804,12 @@ h3 {
 
 .local-photo {
   grid-column: 2;
+  min-width: 0;
 }
 
 .local-copy {
   grid-column: 3;
+  min-width: 0;
 }
 
 .local-photo img {
@@ -830,10 +826,12 @@ h3 {
 
 .experience-copy {
   grid-column: 2;
+  min-width: 0;
 }
 
 .visit-gallery {
   grid-column: 3;
+  min-width: 0;
 }
 
 .experience-copy h2 {
@@ -920,16 +918,11 @@ h3 {
 
   .spring-cards,
   .spring-gallery,
-  .brewery-gallery,
   .label-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .label-card.highlight {
-    grid-column: 1 / -1;
-  }
-
-  .brewery-gallery .featured {
     grid-column: 1 / -1;
   }
 
